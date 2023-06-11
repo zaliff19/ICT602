@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electricity Bill Estimation"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/unitsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Units (kWh)"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/unitsInputLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unitsLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/unitsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/rebateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Rebate Percentage (0% - 5%)"
+        android:textSize="18sp"
+        android:layout_below="@+id/unitsInputLayout"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rebateInputLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rebateLabel"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rebateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none|numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rebateInputLayout"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:text="Calculate"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/totalChargesCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/calculateButton"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/totalChargesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Charges:"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/totalChargesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/finalCostCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/totalChargesCardView"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/finalCostLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Final Cost:"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/finalCostTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
