@@ -40,7 +40,8 @@
             android:id="@+id/unitsEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:hint="Enter units" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -67,7 +68,8 @@
             android:id="@+id/rebateEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none|numberDecimal" />
+            android:inputType="none|numberDecimal"
+            android:hint="Enter rebate percentage" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
